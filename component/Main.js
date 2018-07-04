@@ -14,22 +14,23 @@ import FormInsert from './FormInsert'
 	 }
 	render(){
 		return (
-		<View style={{flex:100,backgroundColor:'yellow',alignSelf:'stretch',justifyContent:'center'}}>
-		<Header/>
-		{this.props.myIsAdd?<FormInsert/>:null}
-		<View style={{flex:80}}>
-		<FlatList
-	data={this.getWordList()}
-	renderItem={({item})=>
-		<Word myWord={item}/>
-	}
-	keyExtractor={item=>item.id+""}
-	/>
+		<View style={{flex:100,backgroundColor:'yellow'
+			,alignSelf:'stretch',justifyContent:'center'}}>
+			<Header/>
+			{this.props.myIsAdd?<FormInsert/>:null}
+			<View style={{flex:80}}>
+				<FlatList
+				data={this.getWordList()}
+				renderItem={({item})=>
+					<Word myWord={item}/>
+				}
+				keyExtractor={item=>item.id+""}
+				/>
+			</View>
+			<View View style={{flex:10}}>
+				<Filter/>
+			</View>
 		</View>
-	<View View style={{flex:10}}>
-	<Filter/>
-	</View>
-        </View>
 		);
 	}
 }

@@ -28,7 +28,8 @@ import {connect} from 'react-redux'
 		<View style={{backgroundColor:'white' ,margin:10,padding:10}}>
             <Text style={{textDecorationLine}}>{en}</Text>
             <Text>{showVn}</Text>
-            <View style={{flexDirection:'row',justifyContent:'space-around'}}>
+            <View style={{flexDirection:'row',
+            justifyContent:'space-around'}}>
             <Button
             title={memorizedButtonText}
             onPress={()=>{this.memorizedWord()}}/>
