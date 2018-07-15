@@ -8,7 +8,8 @@ render(){
 <View style={{flex:10,justifyContent:'space-between',alignItems:'center',backgroundColor:'gray',flexDirection:'row'}}>
 		<Text></Text>
 		<Text>My Word</Text>
-		<TouchableOpacity onPress={()=>{this.props.dispatch({type:"isAdding"})}}>
+		<TouchableOpacity 
+		onPress={()=>{this.props.dispatch({type:"isAdding"})}}>
 		<Text style={{marginRight:30}}>+</Text>
 		</TouchableOpacity>
         </View>
